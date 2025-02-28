@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>birthday</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+</head>
+<body>
+    <!-- 封面页 -->
+    <div id="cover">
+        <h1>婆婆生日快乐呀</h1>
+      <div>
+        <p class="message">
+           引言：前几天认真考虑了挺久到底什么生日礼物会比较合适，思考了半天也没想到，包红包太俗，我熟悉的电子产品买回来也可能没得什么用。突然想起来在回学校之前我们在餐桌上讨论一起出去玩，每每想起来那些时光就会感到愉悦且治愈，像是甘泉从心脏流过去，美好而让人怀念。于是想到可以自己做一个纪念相册，可是一个相册如何能保持更久并且一点我勒个人特色嘞，所以这个网站就诞生了。里面是翻出来的一些挺有代表性的照片，希望婆婆喜欢。
+        </p>
+        <button class="audio-btn" onclick="playAudio('https://raw.githubusercontent.com/kyee179/gallery/main/birthdaygift.mp3')">播放音频</button>
+            <audio id="audio1" src="https://raw.githubusercontent.com/kyee179/gallery/main/birthdaygift.mp3"></audio>
+        </div>
+        <button class="btn" onclick="showGallery()">开启回忆之旅</button>
+    </div>
+
+    <!-- 照片墙页 -->
+    <div id="gallery">
+        <div class="photo-container">
+            <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2015.JPG" class="photo">
+                     <p class="caption">15年的贵州，小七孔的水绿得像宝石，脑子里还印着当时船夫乘着小船缓缓滑过的场景，我们一起的日子总是像这样悠闲安逸。黄果树瀑布的回响依然在耳边，响到2017年……</p>
+               </div>
+            </div>
+            <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2017.JPG" class="photo">
+                     <p class="caption">青岛是一个浪漫的城市，从三亚到青岛我已经长大了很多，老爸常常说起的在三亚老缠着你们去海边捡贝壳的我也在这里喝起了一点啤酒，我还记得有个海鲜店我们去了两次，爷爷说那个鱼鳞没刮干净然后服务员又补偿了一点菜哈哈哈哈（奇怪的记忆点），青岛那段时间真的太美好了以至于我到现在都觉得青岛是全世界最美的海滨城市，我们每天都去海滨玩，听着海浪声拂过细沙来到千佛山……</p>
+               </div>
+            </div>
+          <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2017snow.JPG" class="photo">
+                     <p class="caption">对千佛山的记忆除了为数不多的看到雪，好像就是当时我穿的那个鞋子特别滑，一跤摔下去刚好摔倒骨头上面都有点没知觉了，然后趴在婆婆腿杆上哭哈哈哈哈哈，那个时候也还是好小一点，虽然快赶上婆婆高但是还是要婆婆在旁边保护我……</p>
+               </div>
+            </div>
+          <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2021.JPG" class="photo">
+                     <p class="caption">时间来到2021年，这个时候我已经高考结束我们一大家子人来厦门送我上学。虽然说我没有跟到你们去鼓浪屿哈哈哈哈也是错过了一些美好的瞬间，但是校门口合照对我来说是弥足珍贵的一张合影了，我会永远记得也永远努力做你们的小骄傲……</p>
+               </div>
+            </div>
+          <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2023.JPG" class="photo">
+                     <p class="caption">2023年你们去送老弟上学，虽然没有一起，但是每天都等你们发照片，每一张照片我都保存下来，镜头里的你们尝试了好多新东西新服装，看到你们开心的笑脸我在学校心情也变得很好……</p>
+               </div>
+            </div>
+            <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_2024.jpg" class="photo">
+                     <p class="caption">我超级喜欢24年的这张照片，樱花开的正盛，婆婆的容颜却灿烂过满树的繁花……</p>
+               </div>
+            </div>
+          <div class="photo-item">
+               <div class="photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/kyee179/gallery/main/IMG_8900.JPG" class="photo">
+                     <p class="caption">最后是今年过年新鲜的照片，这当然不算出去玩留下的记忆，但是就像我感触很深的诗句“赌书消得泼茶香，当时只道是寻常”。最平凡最普通的每一天对我来说都是珍贵的记忆，这些记忆永远留在我心中疗愈着我，激励着我。</p>
+               </div>
+            </div>
+            
+            <div class="photo-item" id="ending">
+                <h2>结语</h2>
+                <p>写这些东西的时候也看着照片回想以前的事情，时间太神奇了，模糊了照片也模糊了记忆，而且婆婆记得的东西肯定都比我多好多，感慨一起经历了这么多，也觉得距离完全没有减弱我们还有我和家里的链接。哈哈哈哈感概了这么多最后还是回到正题，祝亲爱的婆婆生日快乐哇！天天开心！开心开心开心！              edit by：wjk ， reference from：老妈</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

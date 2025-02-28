@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '楷体', cursive;
+    background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+    overflow-x: hidden;
+}
+
+/* 封面页样式 */
+#cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    color: #b30000;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 15px 40px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* 照片墙样式 */
+#gallery {
+    display: none;
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.photo-container {
+    display: flex;
+    height: 100vh;
+}
+
+.photo-item {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.photo {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#ending {
+    background: #ffebeb;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 图片容器样式 */
+.photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+/* 图片说明文字样式 */
+.caption {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.4;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+/* 移动端调整 */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+.caption {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.audio-btn {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.audio-btn:hover {
+    background-color: #ff2424;
+}
